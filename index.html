@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Ксюшенька</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <main class="app">
+
+    <img 
+      class="main-image" 
+      src="ksusha.jpeg" 
+      alt="Фон"
+    />
+
+    <section id="homePage" class="page active">
+      <h1 class="main-title">
+        <span class="goblin">🧌</span>
+        Привет, дорогая Ксюшенька!
+      </h1>
+
+      <div class="home-bottom">
+
+        <div class="content-card">
+          <p class="question">Чикен из вот?</p>
+
+          <div class="buttons">
+            <button id="yesBtn" class="glow-btn yes">Да</button>
+            <button id="noBtn" class="glow-btn no">Нет</button>
+          </div>
+        </div>
+
+        <button id="musicBtn" class="glow-btn music-btn">
+          🔊 Включить музыку
+        </button>
+
+      </div>
+    </section>
+
+    <section id="yesPage" class="page answer-page">
+      <h1 class="answer-title success">
+        Правильный ответ, моя красивая! 😊 ❤️
+      </h1>
+
+      <button class="glow-btn back-btn" onclick="showPage(homePage)">
+        Назад
+      </button>
+    </section>
+
+    <section id="noPage" class="page answer-page">
+      <h1 class="answer-title fail">
+        Пашол нахуй 😢
+      </h1>
+
+      <button class="glow-btn back-btn" onclick="showPage(homePage)">
+        Назад
+      </button>
+    </section>
+
+  </main>
+
+  <audio id="bgMusic" loop>
+    <source src="the_mountain-lofi-513863 (2).mp3" type="audio/mpeg">
+  </audio>
+
+  <script src="script.js"></script>
+</body>
+</html>
